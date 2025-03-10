@@ -1,355 +1,80 @@
-Warning: Vehicle '78' performs emergency braking on lane '169543292#2_2' with decel=9.00, wished=4.50, severity=1.00, time=1640.00.
-Warning: Vehicle '166' performs emergency braking on lane '714362126#5_1' with decel=9.00, wished=4.50, severity=1.00, time=3067.00.
-Warning: Vehicle '166' performs emergency stop at the end of lane '784805342_1' because of a red traffic light (decel=-14.24, offset=1.70), time=3068.00.
-Error: tcpip::Socket::recvAndCheck @ recv: peer shutdown
-Quitting (on error).
-e of a red traffic light (decel=-24.10, offset=3.23), time=447.00.
-Warning: Vehicle '75' performs emergency braking on lane '784865484#0_2' with decel=9.00, wished=4.50, severity=1.00, time=470.00.
-Warning: Vehicle '140' performs emergency braking on lane '232874884#6_2' with decel=9.00, wished=4.50, severity=1.00, time=959.00.
-Warning: Teleporting vehicle '124'; waited too long (yield), lane='758465608_0', time=1121.00.
-Warning: Vehicle '124' ends teleporting on edge '992998727#0', time=1121.00.
-Warning: Teleporting vehicle '123'; waited too long (yield), lane='403108653_0', time=1140.00.
-Warning: Vehicle '123' ends teleporting on edge '990219990#0', time=1143.00.
-Warning: Teleporting vehicle '111'; waited too long (yield), lane='758465610_0', time=1147.00.
-Warning: Vehicle '111' ends teleporting on edge '578819521', time=1147.00.
-Warning: Teleporting vehicle '132'; waited too long (yield), lane='403108653_0', time=1445.00.
-Warning: Vehicle '132' ends teleporting on edge '990219990#0', time=1448.00.
-Warning: Teleporting vehicle '164'; waited too long (yield), lane='758465608_0', time=1489.00.
-Warning: Vehicle '164' ends teleporting on edge '992998727#0', time=1489.00.
-Warning: Teleporting vehicle '148'; waited too long (yield), lane='758465610_0', time=1512.00.
-Warning: Vehicle '148' ends teleporting on edge '578819521', time=1512.00.
-Warning: Vehicle '375' performs emergency braking on lane ':6046134553_2_0' with decel=9.00, wished=4.50, severity=1.00, time=2370.00.
-Warning: Vehicle '520' performs emergency braking on lane '749883623#0_0' with decel=9.00, wished=4.50, severity=1.00, time=3198.00.
-Warning: Vehicle '537' performs emergency braking on lane ':6049143021_0_1' with decel=9.00, wished=4.50, severity=1.00, time=3271.00.
-Warning: Vehicle '537' performs emergency stop at the end of lane '714362126#1_1' because of a red traffic light (decel=-22.77, offset=8.48), time=3271.00.
-Warning: Vehicle '529' performs emergency braking on lane '169543292#2_1' with decel=9.00, wished=4.50, severity=1.00, time=3296.00.
+Warning: Vehicle '9' performs emergency braking on lane '169543292#2_1' with decel=9.00, wished=4.50, severity=1.00, time=76.00.
+Warning: Vehicle '167' performs emergency braking on lane '-993395635#2_0' with decel=9.00, wished=4.50, severity=1.00, time=248.00.
+Warning: Vehicle '167' performs emergency stop at the end of lane '-993395635#2_0' because of a red traffic light (decel=-29.82, offset=12.68), time=248.00.
+Warning: Vehicle '263' performs emergency braking on lane '169543292#3_2' with decel=9.00, wished=4.50, severity=1.00, time=352.00.
+Warning: Vehicle '263' performs emergency stop at the end of lane '169543292#3_2' because of a red traffic light (decel=-26.04, offset=13.68), time=352.00.
+Warning: Vehicle '377' performs emergency braking on lane '993213454_2' with decel=9.00, wished=4.50, severity=1.00, time=405.00.
+Warning: Vehicle '353' performs emergency braking on lane ':9072375545_0_1' with decel=9.00, wished=4.50, severity=1.00, time=499.00.
+Warning: Teleporting vehicle '47'; waited too long (yield), lane='578842202_2', time=537.00.
+Warning: Vehicle '47' ends teleporting on edge '759005726#0', time=539.00.
+Warning: Teleporting vehicle '49'; waited too long (yield), lane='578842202_1', time=550.00.
+Warning: Vehicle '49' ends teleporting on edge '759005726#0', time=552.00.
+Warning: Teleporting vehicle '111'; waited too long (yield), lane='41656766_1', time=570.00.
+Warning: Vehicle '111' ends teleporting on edge '759005726#0', time=570.00.
+Warning: Teleporting vehicle '101'; waited too long (yield), lane='41656766_2', time=571.00.
+Warning: Vehicle '101' ends teleporting on edge '759005726#0', time=571.00.
+Warning: Teleporting vehicle '157'; waited too long (jam), lane=':282127222_1_0', time=577.00.
+Warning: Vehicle '157' ends teleporting on edge '993395636', time=577.00.
+Warning: Teleporting vehicle '230'; waited too long (jam), lane='162392786#0_0', time=607.00.
+Warning: Vehicle '230' ends teleporting on edge '162392786#1', time=607.00.
+Warning: Teleporting vehicle '283'; waited too long (jam), lane='-162392786#4_0', time=620.00.
+Warning: Vehicle '283' ends teleporting on edge '-162392786#3', time=639.00.
+Warning: Teleporting vehicle '258'; waited too long (jam), lane=':9173906512_0_0', time=646.00.
+Warning: Vehicle '258' ends teleporting on edge '992998731', time=646.00.
+Warning: Vehicle '626' performs emergency braking on lane '780546369_1' with decel=9.00, wished=4.50, severity=1.00, time=652.00.
+Warning: Vehicle '626' performs emergency stop at the end of lane '780546369_1' because of a red traffic light (decel=-20.06, offset=10.61), time=652.00.
+Warning: Teleporting vehicle '207'; waited too long (wrong lane), lane='784851902_1', time=678.00.
+Warning: Vehicle '207' ends teleporting on edge '41656765', time=681.00.
+Warning: Vehicle '636' performs emergency braking on lane '-993395635#2_0' with decel=9.00, wished=4.50, severity=1.00, time=708.00.
+Warning: Vehicle '636' performs emergency stop at the end of lane '-993395635#2_0' because of a red traffic light (decel=-25.58, offset=4.01), time=708.00.
+Warning: Teleporting vehicle '383'; waited too long (yield), lane='757090905#2_0', time=709.00.
+Warning: Vehicle '383' ends teleporting on edge '-162392786#5', time=711.00.
+Warning: Teleporting vehicle '352'; waited too long (jam), lane=':7089328128_2_0', time=722.00.
+Warning: Vehicle '352' ends teleporting on edge '993395636', time=725.00.
+Warning: Teleporting vehicle '441'; waited too long (yield), lane='-758465568_0', time=755.00.
+Warning: Vehicle '441' ends teleporting on edge '781928196', time=755.00.
+Warning: Teleporting vehicle '78'; waited too long (jam), lane='759005725_0', time=758.00.
+Warning: Vehicle '78' ends teleporting on edge '41656765', time=760.00.
+Warning: Teleporting vehicle '487'; waited too long (yield), lane='-985069015_0', time=797.00.
+Warning: Vehicle '487' ends teleporting on edge '992998733#0', time=813.00.
+Warning: Vehicle '792' performs emergency braking on lane ':7847205283_0_0' with decel=9.00, wished=4.50, severity=1.00, time=830.00.
+Warning: Vehicle '792' performs emergency stop at the end of lane '747351275#1_0' because of a red traffic light (decel=-25.37, offset=12.03), time=830.00.
+Warning: Teleporting vehicle '164'; waited too long (jam), lane=':1742855094_1_0', time=854.00.
+Warning: Vehicle '164' ends teleporting on edge '1173353121', time=854.00.
+Warning: Teleporting vehicle '275'; waited too long (jam), lane=':282127222_2_0', time=882.00.
+Warning: Teleporting vehicle '190'; waited too long (yield), lane='41656766_1', time=885.00.
+Warning: Vehicle '190' ends teleporting on edge '759005726#0', time=885.00.
+Warning: Vehicle '275' ends teleporting on edge '1018158035', time=885.00.
+Warning: Teleporting vehicle '72'; waited too long (yield), lane='41656766_2', time=886.00.
+Warning: Teleporting vehicle '298'; waited too long (jam), lane='784834190_1', time=886.00.
+Warning: Vehicle '72' ends teleporting on edge '759005726#0', time=886.00.
+Warning: Vehicle '298' ends teleporting on edge '578842202', time=886.00.
+Warning: Teleporting vehicle '205'; waited too long (jam), lane='122494743_0', time=907.00.
+Warning: Vehicle '205' ends teleporting on edge '993395636', time=907.00.
+Warning: Teleporting vehicle '407'; waited too long (jam), lane='47657360#5_0', time=911.00.
+Warning: Teleporting vehicle '568'; waited too long (yield), lane='714372719_1', time=913.00.
+Warning: Vehicle '568' ends teleporting on edge '41656765', time=915.00.
+Warning: Vehicle '407' ends teleporting on edge '993395636', time=916.00.
+Warning: Teleporting vehicle '577'; waited too long (yield), lane='-786352439#0_0', time=917.00.
+Warning: Vehicle '577' ends teleporting on edge '762328091', time=917.00.
+Warning: Teleporting vehicle '260'; waited too long (jam), lane='578842209_1', time=918.00.
+Warning: Vehicle '260' ends teleporting on edge '578842205#0', time=918.00.
+Warning: Teleporting vehicle '111'; waited too long (yield), lane='758465610_0', time=920.00.
+Warning: Vehicle '111' ends teleporting on edge '578819521', time=920.00.
+Warning: Teleporting vehicle '172'; waited too long (jam), lane='403108653_0', time=924.00.
+Warning: Vehicle '172' ends teleporting on edge '990219990#0', time=927.00.
+Warning: Teleporting vehicle '297'; waited too long (jam), lane='-162392786#3_0', time=938.00.
+Warning: Teleporting vehicle '371'; waited too long (jam), lane=':1742855094_3_0', time=941.00.
+Warning: Teleporting vehicle '378'; waited too long (jam), lane='1173353127_0', time=943.00.
+Warning: Vehicle '371' ends teleporting on edge '-162392786#5', time=943.00.
+Warning: Teleporting vehicle '534'; waited too long (yield), lane='759005728_1', time=944.00.
+Warning: Teleporting vehicle '287'; waited too long (jam), lane='-162392786#4_0', time=944.00.
+Warning: Vehicle '534' ends teleporting on edge '41656765', time=944.00.
+Warning: Teleporting vehicle '415'; waited too long (jam), lane='1173353119_0', time=945.00.
+Warning: Teleporting vehicle '453'; waited too long (jam), lane='1173353120_0', time=945.00.
+Warning: Teleporting vehicle '230'; waited too long (jam), lane='-162392786#2_0', time=945.00.
+Warning: Vehicle '230' ends teleporting on edge '-162392786#1', time=945.00.
+Warning: Vehicle '297' ends teleporting on edge '-162392786#2', time=945.00.
+Warning: Vehicle '453' ends teleporting on edge '1173353119', time=945.00.
 Error: tcpip::Socket::recvAndCheck @ recv: Socket reset by peer
-Quitting (on error).
-18.27, offset=4.89), time=1231.00.
-Warning: Teleporting vehicle '352'; waited too long (jam), lane=':7089328128_2_0', time=1335.00.
-Warning: Teleporting vehicle '432'; waited too long (yield), lane='578842202_0', time=1338.00.
-Warning: Vehicle '352' ends teleporting on edge '641589077#0', time=1339.00.
-Warning: Vehicle '432' ends teleporting on edge '41656765', time=1342.00.
-Warning: Teleporting vehicle '386'; waited too long (wrong lane), lane='784851902_1', time=1345.00.
-Warning: Teleporting vehicle '329'; waited too long (yield), lane='759005725_0', time=1348.00.
-Warning: Vehicle '386' ends teleporting on edge '41656765', time=1348.00.
-Warning: Vehicle '329' ends teleporting on edge '41656765', time=1350.00.
-Warning: Teleporting vehicle '425'; waited too long (jam), lane='-641589077#1_0', time=1352.00.
-Warning: Vehicle '425' ends teleporting on edge '-641589077#0', time=1369.00.
-Warning: Vehicle '679' performs emergency braking on lane '1356543509#10_0' with decel=9.00, wished=4.50, severity=1.00, time=1377.00.
-Warning: Teleporting vehicle '327'; waited too long (jam), lane='122494743_0', time=1394.00.
-Warning: Vehicle '327' ends teleporting on edge '993395636', time=1394.00.
-Warning: Vehicle '648' performs emergency braking on lane '992998729_0' with decel=9.00, wished=4.50, severity=1.00, time=1553.00.
-Warning: Teleporting vehicle '317'; waited too long (jam), lane=':282127222_2_0', time=1652.00.
-Warning: Vehicle '317' ends erity=1.00, time=3299.00.
-Warning: Teleporting vehicle '549'; waited too long (yield), lane='706923915#1_1', time=3635.00.
-Warning: Vehicle '549' ends teleporting on edge '-784800203', time=3635.00.
-Warning: Vehicle '583' performs emergency braking on lane '787243334_0' with decel=9.00, wished=4.50, severity=1.00, time=3747.00.
-Error: tcpip::Socket::recvAndCheck @ recv: Socket reset by peer
-Quitting (on error).
-ehicle '407' ends teleporting on edge '993395636', time=1701.00.
-Warning: Vehicle '447' ends teleporting on edge '641589077#2', time=1704.00.
-Warning: Teleporting vehicle '354'; waited too long (jam), lane='759005728_1', time=1716.00.
-Warning: Vehicle '354' ends teleporting on edge '41656765', time=1716.00.
-Warning: Teleporting vehicle '412'; waited too long (yield), lane='714372719_2', time=1734.00.
-Warning: Vehicle '412' ends teleporting on edge '41656765', time=1736.00.
-Warning: Teleporting vehicle '575'; waited too long (yield), lane='714372719_0', time=1763.00.
-Warning: Vehicle '575' teleports beyond arrival edge '41656766', time=1766.00.
-Warning: Teleporting vehicle '562'; waited too long (jam), lane='784835537_0', time=1774.00.
-Warning: Vehicle '562' ends teleporting on edge '993395636', time=1776.00.
-Warning: Teleporting vehicle '495'; waited too long (yield), lane='759005728_2', time=1780.00.
-Warning: Vehicle '495' ends teleporting on edge '41656765', time=1780.00.
-Warning: Teleporting vehicle '646'; waited too long (yield), lane='41656766_1', time=1798.00.
-Warning: Teleporting vehicle '602'; waited too long (yield), lane='578842202_1', time=1798.00.
-Warning: Vehicle '602' ends teleporting on edge '41656766', time=1798.00.
-Warning: Vehicle '646' ends teleporting on edge '759005726#0', time=1798.00.
-Warning: Teleporting vehicle '477'; waited too long (wrong lane), lane='784851902_1', time=1977.00.
-Warning: Teleporting vehicle '500'; waited too long (jam), lane='-641589077#1_0', time=1979.00.
-Warning: Vehicle '500' ends teleporting on edge '-641589077#0', time=1979.00.
-Warning: Vehicle '477' ends teleporting on edge '41656765', time=1980.00.
-Warning: Teleporting vehicle '668'; waited too long (jam), lane='714372715_1', time=1988.00.
-Warning: Vehicle '668' ends teleporting on edge '714372719', time=1988.00.
-Warning: Teleporting vehicle '738'; waited too long (yield), lane='41656766_1', time=1993.00.
-Warning: Teleporting vehicle '540'; waited too long (yield), lane='41656766_0', time=1993.00.
-Warning: Vehicle '738' ends teleporting on edge '759005726#0', time=1993.00.
-Warning: Teleporting vehicle '746'; waited too long (jam), lane=':282127222_5_0', time=1996.00.
-Warning: Vehicle '540' ends teleporting on edge '41656765', time=1996.00.
-Warning: Vehicle '746' ends teleporting on edge '993395636', time=1996.00.
-Warning: Teleporting vehicle '369'; waited too long (yield), lane='122494743_0', time=2000.00.
-Warning: Vehicle '369' ends teleporting on edge '993395636', time=2000.00.
-Warning: Teleporting vehicle '437'; waited too long (wrong lane), lane='759005728_0', time=2004.00.
-Warning: Vehicle '437' ends teleporting on edge '41656765', time=2004.00.
-Warning: Teleporting vehicle '568'; waited too long (yield), lane='714372719_1', time=2021.00.
-Warning: Teleporting vehicle '392'; waited too long (jam), lane='759005728_1', time=2022.00.
-Warning: Vehicle '392' ends teleporting on edge '41656765', time=2022.00.
-Warning: Vehicle '568' ends teleporting on edge '759005728', time=2022.00.
-Warning: Vehicle '992' performs emergency braking on lane '749883623#1_0' with decel=9.00, wished=4.50, severity=1.00, time=2094.00.
-Warning: Vehicle '992' performs emergency stop at the end of lane '749883623#1_0' because of a red traffic light (decel=-19.96, offset=6.85), time=2094.00.
-Warning: Teleporting vehicle '602'; waited too long (yield), lane='41656766_2', time=2099.00.
-Warning: Vehicle '602' ends teleporting on edge '759005726#0', time=2099.00.
-Warning: Teleporting vehicle '550'; waited too long (yield), lane='759005728_2', time=2101.00.
-Warning: Vehicle '550' ends teleporting on edge '41656765', time=2101.00.
-Warning: Teleporting vehicle '860'; waited too long (yield), lane='714372719_0', time=2126.00.
-Warning: Vehicle '860' ends teleporting on edge '641589077#0', time=2130.00.
-Warning: Vehicle '947' performs emergency braking on lane '706923915#1_0' with decel=9.00, wished=4.50, severity=1.00, time=2137.00.
-Warning: Vehicle '947' performs emergency stop at the end of lane '706923915#1_0' because of a red traffic light (decel=-11.04, offset=1.79), time=2137.00.
-Warning: Vehicle '1045' performs emergency braking on lane '749883672_0' with decel=9.00, wished=4.50, severity=1.00, time=2186.00.
-Warning: Vehicle '1014' performs emergency braking on lane '23128690#0_1' with decel=9.00, wished=4.50, severity=1.00, time=2202.00.
-Warning: Vehicle '1083' performs emergency braking on lane '714362126#0_1' with decel=9.00, wished=4.50, severity=1.00, time=2259.00.
-Warning: Teleporting vehicle '478'; waited too long (yield), lane='784851902_0', time=2287.00.
-Warning: Vehicle '478' ends teleporting on edge '41656765', time=2290.00.
-Warning: Teleporting vehicle '687'; waited too long (jam), lane=':282127222_2_0', time=2297.00.
-Warning: Vehicle '687' ends teleporting on edge '41656765', time=2301.00.
-Warning: Teleporting vehicle '906'; waited too long (wrong lane), lane='759005728_0', time=2305.00.
-Warning: Vehicle '906' ends teleporting on edge '41656765', time=2305.00.
-Warning: Vehicle '1097' performs emergency braking on lane '179745731_0' with decel=9.00, wished=4.50, severity=1.00, time=2315.00.
-Warning: Vehicle '1097' performs emergency stop at the end of lane '179745734_0' because of a red traffic light (decel=-26.65, offset=3.40), time=2315.00.
-Warning: Teleporting vehicle '568'; waited too long (jam), lane='759005728_1', time=2323.00.
-Warning: Vehicle '568' ends teleporting on edge '41656765', time=2323.00.
-Warning: Teleporting vehicle '668'; waited too long (yield), lane='714372719_0', time=2325.00.
-Warning: Vehicle '668' ends teleporting on edge '759005728', time=2325.00.
-Warning: Teleporting vehicle '398'; waited too long (yield), lane='714372719_1', time=2326.00.
-Warning: Vehicle '398' ends teleporting on edge '41656765', time=2328.00.
-Warning: Teleporting vehicle '741'; waited too long (jam), lane='714372715_1', time=2333.00.
-Warning: Teleporting vehicle '469'; waited too long (yield), lane='122494743_0', time=2333.00.
-Warning: Vehicle '741' ends teleporting on edge '714372719', time=2333.00.
-Warning: Teleporting vehicle '993'; waited too long (yield), lane='-714372718#0_0', time=2336.00.
-Warning: Vehicle '993' ends teleporting on edge '714372719', time=2336.00.
-Warning: Vehicle '469' ends teleporting on edge '641589077#0', time=2344.00.
-Warning: Teleporting vehicle '579'; waited too long (yield), lane='41656766_1', time=2357.00.
-Warning: Vehicle '579' ends teleporting on edge '759005726#0', time=2357.00.
-Warning: Vehicle '1141' performs emergency braking on lane '749883623#1_0' with decel=9.00, wished=4.50, severity=1.00, time=2370.00.
-Warning: Vehicle '1141' performs emergency stop at the end of lane '749883623#1_0' because of a red traffic light (decel=-22.60, offset=6.74), time=2370.00.
-Warning: Teleporting vehicle '473'; waited too long (yield), lane='714372719_1', time=2406.00.
-Warning: Teleporting vehicle '735'; waited too long (jam), lane=':9177688630_1_0', time=2406.00.
-Warning: Vehicle '735' ends teleporting on edge '641589077#0', time=2406.00.
-Warning: Vehicle '473' ends teleporting on edge '41656765', time=2408.00.
-Warning: Teleporting vehicle '566'; waited too long (yield), lane='759005728_2', time=2422.00.
-Warning: Vehicle '566' ends teleporting on edge '41656765', time=2422.00.
-Warning: Teleporting vehicle '743'; waited too long (yield), lane='41656766_2', time=2428.00.
-Warning: Vehicle '743' ends teleporting on edge '759005726#0', time=2428.00.
-Warning: Teleporting vehicle '1118'; waited too long (yield), lane='762328091_0', time=2573.00.
-Warning: Vehicle '1118' ends teleporting on edge '578842205#1', time=2573.00.
-Warning: Teleporting vehicle '1138'; waited too long (yield), lane='-786352439#0_0', time=2591.00.
-Warning: Vehicle '1138' ends teleporting on edge '762328091', time=2591.00.
-Warning: Teleporting vehicle '644'; waited too long (jam), lane='-641589077#1_0', time=2600.00.
-Warning: Teleporting vehicle '705'; waited too long (jam), lane=':282127222_2_0', time=2601.00.
-Warning: Vehicle '705' ends teleporting on edge '1018158035', time=2604.00.
-Warning: Teleporting vehicle '801'; waited too long (jam), lane='-641589077#2_0', time=2608.00.
-Warning: Teleporting vehicle '430'; waited too long (wrong lane), lane='759005728_0', time=2610.00.
-Warning: Vehicle '430' ends teleporting on edge '41656765', time=2610.00.
-Warning: Teleporting vehicle '517'; waited too long (wrong lane), lane='784851902_1', time=2611.00.
-Warning: Teleporting vehicle '500'; waited too long (yield), lane='784851902_0', time=2611.00.
-Warning: Vehicle '644' ends teleporting on edge '-641589077#0', time=2613.00.
-Warning: Vehicle '500' ends teleporting on edge '41656765', time=2614.00.
-Warning: Vehicle '517' ends teleporting on edge '41656765', time=2614.00.
-Warning: Vehicle '1238' performs emergency braking on lane '232874884#8_2' with decel=9.00, wished=4.50, severity=1.00, time=2615.00.
-Warning: Vehicle '1238' performs emergency stop at the end of lane '232874884#8_2' because of a red traffic light (decel=-25.00, offset=0.15), time=2615.00.
-Warning: Teleporting vehicle '668'; waited too long (yield), lane='759005728_1', time=2626.00.
-Warning: Vehicle '668' ends teleporting on edge '41656765', time=2626.00.
-Warning: Teleporting vehicle '1149'; waited too long (yield), lane='159153395#2_0', time=2627.00.
-Warning: Vehicle '1149' ends teleporting on edge '784834190', time=2627.00.
-Warning: Teleporting vehicle '1096'; waited too long (jam), lane='578842209_1', time=2674.00.
-Warning: Vehicle '1096' ends teleporting on edge '578842205#0', time=2674.00.
-Warning: Teleporting vehicle '765'; waited too long (yield), lane='41656766_1', time=2685.00.
-Warning: Vehicle '765' ends teleporting on edge '759005726#0', time=2685.00.
-Warning: Teleporting vehicle '885'; waited too long (jam), lane='784834190_1', time=2698.00.
-Warning: Vehicle '885' ends teleporting on edge '578842202', time=2698.00.
-Warning: Teleporting vehicle '832'; waited too long (yield), lane='122494743_0', time=2710.00.
-Warning: Vehicle '832' ends teleporting on edge '993395636', time=2710.00.
-Warning: Teleporting vehicle '1043'; waited too long (jam), lane=':249493845_0_1', time=2711.00.
-Warning: Teleporting vehicle '453'; waited too long (yield), lane='714372719_1', time=2711.00.
-Warning: Vehicle '1043' ends teleporting on edge '578842205#0', time=2711.00.
-Warning: Vehicle '453' ends teleporting on edge '41656765', time=2713.00.
-Warning: Teleporting vehicle '692'; waited too long (jam), lane='759005728_1', time=2746.00.
-Warning: Vehicle '692' ends teleporting on edge '41656765', time=2746.00.
-Warning: Vehicle '801' ends teleporting on edge '759005726#0', time=2766.00.
-Warning: Teleporting vehicle '809'; waited too long (jam), lane='41656766_2', time=2819.00.
-Warning: Vehicle '809' ends teleporting on edge '759005726#0', time=2819.00.
-Warning: Teleporting vehicle '718'; waited too long (wrong lane), lane='784851902_1', time=2961.00.
-Warning: Vehicle '718' ends teleporting on edge '41656765', time=2964.00.
-Warning: Teleporting vehicle '618'; waited too long (yield), lane='759005728_1', time=2975.00.
-Warning: Vehicle '618' ends teleporting on edge '41656765', time=2975.00.
-Warning: Teleporting vehicle '798'; waited too long (jam), lane='41656766_0', time=3000.00.
-Warning: Teleporting vehicle '700'; waited too long (jam), lane='41656766_1', time=3000.00.
-Warning: Vehicle '700' ends teleporting on edge '759005726#0', time=3000.00.
-Warning: Teleporting vehicle '425'; waited too long (yield), lane='759005725_0', time=3001.00.
-Warning: Vehicle '798' ends teleporting on edge '759005725', time=3001.00.
-Warning: Vehicle '425' ends teleporting on edge '41656765', time=3003.00.
-Warning: Teleporting vehicle '644'; waited too long (yield), lane='784851902_0', time=3004.00.
-Warning: Vehicle '644' ends teleporting on edge '41656765', time=3007.00.
-Warning: Teleporting vehicle '512'; waited too long (yield), lane='714372719_1', time=3016.00.
-Warning: Teleporting vehicle '1107'; waited too long (jam), lane='578842209_1', time=3017.00.
-Warning: Vehicle '1107' ends teleporting on edge '578842205#0', time=3017.00.
-Warning: Vehicle '512' ends teleporting on edge '41656765', time=3018.00.
-Warning: Teleporting vehicle '952'; waited too long (jam), lane='759005728_0', time=3022.00.
-Warning: Teleporting vehicle '939'; waited too long (yield), lane='122494743_0', time=3024.00.
-Warning: Vehicle '939' ends teleporting on edge '993395636', time=3024.00.
-Warning: Vehicle '952' ends teleporting on edge '641589077#0', time=3025.00.
-Warning: Teleporting vehicle '1164'; waited too long (yield), lane='784835537_0', time=3026.00.
-Warning: Vehicle '1164' ends teleporting on edge '993395636', time=3028.00.
-Warning: Teleporting vehicle '1098'; waited too long (jam), lane='760111259#6_1', time=3056.00.
-Warning: Vehicle '1098' ends teleporting on edge '760111259#7', time=3056.00.
-Warning: Vehicle '1465' performs emergency braking on lane '232874884#8_0' with decel=9.00, wished=4.50, severity=1.00, time=3075.00.
-Warning: Vehicle '1465' performs emergency stop at the end of lane '232874884#8_0' because of a red traffic light (decel=-28.56, offset=5.30), time=3075.00.
-Warning: Teleporting vehicle '1165'; waited too long (jam), lane='760111259#5_1', time=3091.00.
-Warning: Vehicle '1165' ends teleporting on edge '760111259#6', time=3091.00.
-Warning: Teleporting vehicle '658'; waited too long (yield), lane='759005728_1', time=3112.00.
-Warning: Vehicle '658' ends teleporting on edge '41656765', time=3112.00.
-Warning: Teleporting vehicle '807'; waited too long (jam), lane='-641589077#1_0', time=3273.00.
-Warning: Teleporting vehicle '1093'; waited too long (jam), lane='-641589077#2_0', time=3280.00.
-Warning: Teleporting vehicle '695'; waited too long (yield), lane='759005728_1', time=3293.00.
-Warning: Vehicle '695' ends teleporting on edge '41656765', time=3293.00.
-Warning: Teleporting vehicle '798'; waited too long (jam), lane='759005725_0', time=3302.00.
-Warning: Vehicle '798' ends teleporting on edge '759005728', time=3302.00.
-Warning: Teleporting vehicle '774'; waited too long (wrong lane), lane='784851902_1', time=3310.00.
-Warning: Teleporting vehicle '745'; waited too long (yield), lane='784851902_0', time=3310.00.
-Warning: Vehicle '807' ends teleporting on edge '784851902', time=3310.00.
-Warning: Vehicle '745' ends teleporting on edge '41656765', time=3313.00.
-Warning: Vehicle '774' ends teleporting on edge '41656765', time=3313.00.
-Warning: Teleporting vehicle '741'; waited too long (yield), lane='714372719_1', time=3321.00.
-Warning: Vehicle '741' ends teleporting on edge '41656765', time=3323.00.
-Warning: Teleporting vehicle '993'; waited too long (yield), lane='714372719_0', time=3327.00.
-Warning: Teleporting vehicle '988'; waited too long (jam), lane='759005728_0', time=3328.00.
-Warning: Teleporting vehicle '851'; waited too long (jam), lane='714372715_1', time=3328.00.
-Warning: Teleporting vehicle '1433'; waited too long (jam), lane='-714372718#1_0', time=3328.00.
-Warning: Vehicle '1433' ends teleporting on edge '-714372718#0', time=3328.00.
-Warning: Vehicle '988' ends teleporting on edge '993395636', time=3330.00.
-Warning: Vehicle '993' ends teleporting on edge '641589077#0', time=3331.00.
-Warning: Vehicle '851' ends teleporting on edge '714372719', time=3334.00.
-Warning: Teleporting vehicle '1032'; waited too long (jam), lane='122494743_0', time=3341.00.
-Warning: Vehicle '1032' ends teleporting on edge '993395636', time=3341.00.
-Warning: Teleporting vehicle '1484'; waited too long (yield), lane='156570525#5_0', time=3345.00.
-Warning: Vehicle '1484' ends teleporting on edge '760111259#4', time=3345.00.
-Warning: Teleporting vehicle '1241'; waited too long (yield), lane='784835537_0', time=3356.00.
-Warning: Vehicle '1241' ends teleporting on edge '993395636', time=3358.00.
-Warning: Vehicle '988' performs emergency braking on lane ':7089328137_7_0' with decel=9.00, wished=4.50, severity=1.00, time=3376.00.
-Warning: Vehicle '988' performs emergency stop at the end of lane '993395635#1_0' because of a red traffic light (decel=-27.81, offset=7.88), time=3376.00.
-Warning: Vehicle '1664' performs emergency braking on lane '787243334_2' with decel=9.00, wished=4.50, severity=1.00, time=3380.00.
-Warning: Vehicle '1594' performs emergency braking on lane ':7083442608_2_2' with decel=9.00, wished=4.50, severity=1.00, time=3391.00.
-Warning: Vehicle '1594' performs emergency stop at the end of lane '180391474#2_3' because of a red traffic light (decel=-18.09, offset=7.02), time=3392.00.
-Warning: Teleporting vehicle '1194'; waited too long (jam), lane='760111259#4_1', time=3394.00.
-Warning: Vehicle '1194' ends teleporting on edge '760111259#5', time=3394.00.
-Warning: Vehicle '1093' ends teleporting on edge '759005726#0', time=3438.00.
-Warning: Teleporting vehicle '915'; waited too long (yield), lane='41656766_0', time=3631.00.
-Warning: Vehicle '915' ends teleporting on edge '41656765', time=3634.00.
-Warning: Teleporting vehicle '1565'; waited too long (jam), lane='784834190_0', time=3641.00.
-Warning: Teleporting vehicle '796'; waited too long (wrong lane), lane='784851902_1', time=3651.00.
-Warning: Vehicle '796' ends teleporting on edge '1018158035', time=3653.00.
-Warning: Teleporting vehicle '1229'; waited too long (yield), lane='122494743_0', time=3658.00.
-Warning: Vehicle '1229' ends teleporting on edge '993395636', time=3658.00.
-Warning: Vehicle '1770' performs emergency braking on lane ':7083442608_2_2' with decel=9.00, wished=4.50, severity=1.00, time=3667.00.
-Warning: Vehicle '1770' performs emergency stop at the end of lane '180391474#2_2' because of a red traffic light (decel=-30.36, offset=2.60), time=3667.00.
-Warning: Teleporting vehicle '1138'; waited too long (yield), lane='41656766_1', time=3738.00.
-Warning: Vehicle '1138' ends teleporting on edge '759005726#0', time=3738.00.
-Warning: Teleporting vehicle '999'; waited too long (yield), lane='41656766_1', time=3739.00.
-Warning: Vehicle '999' ends teleporting on edge '759005726#0', time=3739.00.
-Warning: Teleporting vehicle '807'; waited too long (jam), lane='759005725_0', time=3741.00.
-Warning: Vehicle '807' ends teleporting on edge '41656765', time=3743.00.
-Warning: Teleporting vehicle '820'; waited too long (jam), lane='784851902_0', time=3745.00.
-Warning: Vehicle '820' ends teleporting on edge '41656765', time=3748.00.
-Warning: Vehicle '1565' ends teleporting on edge '1018158035', time=3757.00.
-Warning: Teleporting vehicle '1279'; waited too long (jam), lane='784834190_1', time=3758.00.
-Warning: Teleporting vehicle '1392'; waited too long (jam), lane='578842205#1_1', time=3760.00.
-Warning: Vehicle '1392' ends teleporting on edge '784834190', time=3760.00.
-Warning: Teleporting vehicle '1412'; waited too long (jam), lane=':249493845_0_1', time=3766.00.
-Warning: Vehicle '1412' ends teleporting on edge '578842205#0', time=3766.00.
-Warning: Teleporting vehicle '1672'; waited too long (yield), lane='-786352439#0_0', time=3770.00.
-Warning: Vehicle '1672' ends teleporting on edge '762328091', time=3771.00.
-Warning: Vehicle '1279' ends teleporting on edge '993395636', time=3816.00.
-Warning: Teleporting vehicle '1772'; waited too long (yield), lane='-156570278#0_0', time=3866.00.
-Warning: Teleporting vehicle '851'; waited too long (yield), lane='759005728_1', time=3925.00.
-Warning: Vehicle '851' ends teleporting on edge '41656765', time=3925.00.
-Warning: Teleporting vehicle '824'; waited too long (jam), lane=':7089328128_2_1', time=3926.00.
-Warning: Vehicle '824' ends teleporting on edge '41656765', time=3928.00.
-Warning: Teleporting vehicle '1621'; waited too long (jam), lane='784834190_0', time=3946.00.
-Warning: Teleporting vehicle '1025'; waited too long (jam), lane='714372715_1', time=3951.00.
-Warning: Vehicle '1025' ends teleporting on edge '714372719', time=3951.00.
-Warning: Vehicle '1772' ends teleporting on edge '41656765', time=3983.00.
-Warning: Teleporting vehicle '922'; waited too long (jam), lane='759005728_1', time=3986.00.
-Warning: Teleporting vehicle '1206'; waited too long (jam), lane='759005728_0', time=3986.00.
-Warning: Vehicle '922' ends teleporting on edge '41656765', time=3986.00.
-Warning: Teleporting vehicle '1413'; waited too long (yield), lane='122494743_0', time=3987.00.
-Warning: Vehicle '1206' ends teleporting on edge '122494743', time=3987.00.
-Warning: Vehicle '1413' ends teleporting on edge '993395636', time=3987.00.
-Warning: Teleporting vehicle '1572'; waited too long (yield), lane='784835537_0', time=3988.00.
-Warning: Teleporting vehicle '1529'; waited too long (jam), lane=':249808052_3_0', time=3989.00.
-Warning: Vehicle '1572' ends teleporting on edge '993395636', time=3990.00.
-Warning: Vehicle '1529' ends teleporting on edge '641589077#0', time=3992.00.
-Warning: Teleporting vehicle '1087'; waited too long (yield), lane='578842202_2', time=4043.00.
-Warning: Vehicle '1087' ends teleporting on edge '759005726#0', time=4045.00.
-Warning: Teleporting vehicle '1344'; waited too long (yield), lane='578842202_2', time=4046.00.
-Warning: Vehicle '1344' ends teleporting on edge '759005726#0', time=4048.00.
-Warning: Vehicle '1621' ends teleporting on edge '1018158035', time=4062.00.
-Warning: Teleporting vehicle '1296'; waited too long (yield), lane='41656766_2', time=4066.00.
-Warning: Teleporting vehicle '1231'; waited too long (yield), lane='41656766_1', time=4066.00.
-Warning: Teleporting vehicle '966'; waited too long (yield), lane='41656766_0', time=4066.00.
-Warning: Vehicle '1231' ends teleporting on edge '759005726#0', time=4066.00.
-Warning: Vehicle '1296' ends teleporting on edge '759005726#0', time=4066.00.
-Warning: Vehicle '966' ends teleporting on edge '759005728', time=4068.00.
-Warning: Teleporting vehicle '1425'; waited too long (jam), lane='578842209_1', time=4072.00.
-Warning: Vehicle '1425' ends teleporting on edge '578842205#0', time=4072.00.
-Warning: Teleporting vehicle '1428'; waited too long (jam), lane='578842205#1_1', time=4074.00.
-Warning: Vehicle '1428' ends teleporting on edge '784834190', time=4078.00.
-Warning: Teleporting vehicle '1702'; waited too long (jam), lane='578842212#1_1', time=4080.00.
-Warning: Vehicle '1702' ends teleporting on edge '578842212#2', time=4080.00.
-Warning: Teleporting vehicle '1373'; waited too long (jam), lane='578842205#1_1', time=4083.00.
-Warning: Vehicle '1373' ends teleporting on edge '784834190', time=4084.00.
-Warning: Vehicle '1075' performs emergency braking on lane '706923925#0_1' with decel=9.00, wished=4.50, severity=1.00, time=4119.00.
-Warning: Vehicle '1075' performs emergency stop at the end of lane '706923925#0_1' because of a red traffic light (decel=-13.69, offset=1.14), time=4119.00.
-Warning: Teleporting vehicle '1206'; waited too long (yield), lane='122494743_0', time=4288.00.
-Warning: Teleporting vehicle '1413'; waited too long (jam), lane=':9177688630_1_0', time=4290.00.
-Warning: Vehicle '1413' ends teleporting on edge '641589077#0', time=4290.00.
-Warning: Vehicle '1206' ends teleporting on edge '641589077#0', time=4299.00.
-Warning: Teleporting vehicle '1268'; waited too long (jam), lane=':7089328128_2_0', time=4304.00.
-Warning: Vehicle '1268' ends teleporting on edge '641589077#0', time=4308.00.
-Warning: Teleporting vehicle '804'; waited too long (jam), lane='759005725_0', time=4341.00.
-Warning: Vehicle '804' ends teleporting on edge '41656765', time=4343.00.
-Warning: Teleporting vehicle '1612'; waited too long (jam), lane='578842202_1', time=4372.00.
-Warning: Teleporting vehicle '1024'; waited too long (yield), lane='784851902_0', time=4375.00.
-Warning: Vehicle '1612' ends teleporting on edge '41656765', time=4376.00.
-Warning: Vehicle '1024' ends teleporting on edge '41656765', time=4378.00.
-Warning: Teleporting vehicle '1390'; waited too long (jam), lane='784834190_1', time=4382.00.
-Warning: Teleporting vehicle '1702'; waited too long (wrong lane), lane='714372722_0', time=4389.00.
-Warning: Vehicle '1702' ends teleporting on edge '578842203', time=4389.00.
-Warning: Vehicle '1390' ends teleporting on edge '641589077#0', time=4497.00.
-Warning: Teleporting vehicle '1733'; waited too long (yield), lane='714372719_1', time=4583.00.
-Warning: Vehicle '1733' ends teleporting on edge '41656765', time=4585.00.
-Warning: Teleporting vehicle '1754'; waited too long (yield), lane='714372719_2', time=4586.00.
-Warning: Vehicle '1754' ends teleporting on edge '41656765', time=4588.00.
-Warning: Teleporting vehicle '1737'; waited too long (yield), lane='759005728_2', time=4631.00.
-Warning: Teleporting vehicle '1687'; waited too long (yield), lane='759005728_1', time=4631.00.
-Warning: Teleporting vehicle '1433'; waited too long (jam), lane=':7089328128_2_0', time=4631.00.
-Warning: Teleporting vehicle '1749'; waited too long (jam), lane='122494743_0', time=4631.00.
-Warning: Vehicle '1687' ends teleporting on edge '41656765', time=4631.00.
-Warning: Vehicle '1737' ends teleporting on edge '41656765', time=4631.00.
-Warning: Vehicle '1433' ends teleporting on edge '641589077#0', time=4635.00.
-Warning: Vehicle '1749' ends teleporting on edge '641589077#0', time=4642.00.
-Warning: Teleporting vehicle '1199'; waited too long (jam), lane='41656766_0', time=4644.00.
-Warning: Vehicle '1199' ends teleporting on edge '759005728', time=4646.00.
-Warning: Teleporting vehicle '1320'; waited too long (yield), lane='578842202_2', time=4651.00.
-Warning: Teleporting vehicle '804'; waited too long (jam), lane=':249493849_5_0', time=4655.00.
-Warning: Vehicle '804' ends teleporting on edge '-159153395#2', time=4655.00.
-Warning: Vehicle '1320' ends teleporting on edge '641589077#0', time=4662.00.
-Warning: Teleporting vehicle '1061'; waited too long (yield), lane='784851902_0', time=4680.00.
-Warning: Vehicle '1061' ends teleporting on edge '41656765', time=4683.00.
-Warning: Teleporting vehicle '1380'; waited too long (jam), lane='-641589077#1_0', time=4689.00.
-Warning: Teleporting vehicle '1374'; waited too long (jam), lane='578842205#1_1', time=4694.00.
-Warning: Vehicle '1374' ends teleporting on edge '784834190', time=4694.00.
-Warning: Vehicle '1380' ends teleporting on edge '784851902', time=4709.00.
-Warning: Teleporting vehicle '1083'; waited too long (jam), lane='41656766_1', time=4749.00.
-Warning: Vehicle '1083' ends teleporting on edge '759005726#0', time=4749.00.
-Warning: Teleporting vehicle '1734'; waited too long (yield), lane='714372719_1', time=4889.00.
-Warning: Vehicle '1734' ends teleporting on edge '41656765', time=4891.00.
-Warning: Teleporting vehicle '1752'; waited too long (jam), lane=':249808052_3_0', time=4935.00.
-Warning: Vehicle '1752' ends teleporting on edge '641589077#0', time=4938.00.
-Warning: Teleporting vehicle '1019'; waited too long (yield), lane='759005728_1', time=4941.00.
-Warning: Vehicle '1019' ends teleporting on edge '41656765', time=4941.00.
-Warning: Teleporting vehicle '1199'; waited too long (yield), lane='759005728_2', time=4947.00.
-Warning: Vehicle '1199' ends teleporting on edge '41656765', time=4947.00.
-Warning: Teleporting vehicle '1391'; waited too long (jam), lane='578842202_2', time=4957.00.
-Warning: Vehicle '1391' ends teleporting on edge '641589077#0', time=4968.00.
-Warning: Teleporting vehicle '1745'; waited too long (jam), lane='578842209_1', time=5296.00.
-Warning: Vehicle '1745' ends teleporting on edge '578842205#0', time=5296.00.
-Error: tcpip::Socket::recvAndCheck @ recv: peer shutdown
 Quitting (on error).

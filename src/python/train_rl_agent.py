@@ -1,44 +1,33 @@
-#!/usr/bin/env python
+import traci
 import os
 import sys
 import time
+import numpy as np
 import argparse
-import multiprocessing
 import matplotlib.pyplot as plt
 from halo import Halo  # For a spinner during training
-import traci
-import torch
-import numpy as np
-
-# Import your PPO agent
-from rl_agent import TrafficLightPPOAgent
+from rl_agent import TrafficLightPPOAgent  # Import the PPO agent
+# (Ensure that PyTorch is installed)
 
 # Ensure SUMO_HOME is set
 if "SUMO_HOME" not in os.environ:
     sys.exit("Please declare the environment variable 'SUMO_HOME'")
 
-# -------------------------
-# Global Paths & Configurations
-# -------------------------
+# Paths to SUMO scripts and files
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 TOOLS_DIR = os.path.join(PROJECT_ROOT, "..", "tools")
-# ROUTES_DIR: where generated trips and routes files will be stored
-ROUTES_DIR = os.path.join(PROJECT_ROOT, "..", "routes")
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "..", "output")
 MODEL_DIR = os.path.join(OUTPUT_DIR, "models")
 LOG_FILE = os.path.join(OUTPUT_DIR, "sumo_errors.log")
 
 SUMO_CONFIG = os.path.join(PROJECT_ROOT, "..", "config", "GeorgeTown.sumo.cfg")
 NETWORK_FILE = os.path.join(PROJECT_ROOT, "..", "network", "GeorgeTown.net.xml")
-# Use our local copy of randomTrips.py from the tools folder:
-RANDOM_TRIPS_SCRIPT = os.path.join(TOOLS_DIR, "randomTrips.py")
+TRIPS_FILE = os.path.join(PROJECT_ROOT, "..", "routes", "GeorgeTown.trips.xml")
+ROUTES_FILE = os.path.join(PROJECT_ROOT, "..", "routes", "GeorgeTown.rou.xml")
+RANDOM_TRIPS_SCRIPT = os.path.join(TOOLS_DIR, "randomTrips.py")  # Local copy
 
-# -------------------------
-# Parse Command-Line Arguments
-# -------------------------
-parser = argparse.ArgumentParser(
-    description="Run PPO-controlled SUMO traffic simulation in parallel for different traffic levels."
-)
+# Parse command-line arguments
+parser = argparse.ArgumentParser(description="Run PPO-controlled SUMO traffic simulation.")
 parser.add_argument("--gui", action="store_true", help="Run SUMO with GUI visualization")
 args = parser.parse_args()
 
@@ -48,171 +37,114 @@ SUMO_BINARY = "sumo-gui" if args.gui else "sumo"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(MODEL_DIR, exist_ok=True)
 
-# -------------------------
-# Function: Generate Random Routes for a Given Traffic Level
-# -------------------------
-def generate_random_routes(traffic_level):
-    """
-    Generate trips and routes for the specified traffic level.
-    Different insertion rates are used for low, medium, and rush-hour traffic.
-    The generated files are stored in the routes folder.
-    """
-    print(f"🔄 Generating {traffic_level} traffic routes...")
-
+# Function to generate new randomized routes
+def generate_random_routes():
+    print("🔄 Generating new traffic routes...")
     if not os.path.exists(RANDOM_TRIPS_SCRIPT):
         sys.exit(f"Error: {RANDOM_TRIPS_SCRIPT} not found. Ensure 'randomTrips.py' is in the tools directory.")
+    os.system(f'python "{RANDOM_TRIPS_SCRIPT}" -n "{NETWORK_FILE}" -o "{TRIPS_FILE}" --end 3600 --validate --fringe-factor 5')
+    os.system(f'duarouter --net-file "{NETWORK_FILE}" --route-files "{TRIPS_FILE}" --output-file "{ROUTES_FILE}"')
+    print("✅ New routes generated.")
 
-    # Build output file names inside the routes folder:
-    trips_file = os.path.join(ROUTES_DIR, f"GeorgeTown_{traffic_level}.trips.xml")
-    routes_file = os.path.join(ROUTES_DIR, f"GeorgeTown_{traffic_level}.rou.xml")
-
-    if traffic_level == "low":
-        insertion_rate = 200  # Vehicles per hour
-    elif traffic_level == "medium":
-        insertion_rate = 600  # Vehicles per hour
-    elif traffic_level == "rush":
-        insertion_rate = 1800  # Vehicles per hour
-    else:
-        sys.exit("Invalid traffic level provided.")
-
-    # Call randomTrips.py with both -o and -r options so that it generates both files.
-    os.system(
-        f'python "{RANDOM_TRIPS_SCRIPT}" -n "{NETWORK_FILE}" -o "{trips_file}" -r "{routes_file}" '
-        f'--end 3600 --insertion-rate {insertion_rate} --validate --fringe-factor 5'
-    )
-    # Optionally, wait a short time to allow file operations to complete.
-    time.sleep(2)
-    print(f"✅ {traffic_level} traffic routes generated in {routes_file}.")
-    return routes_file
-
-# -------------------------
-# Function: Save Best Model for a Given Traffic Level
-# -------------------------
-def save_best_model(agents, avg_reward, traffic_level):
-    """
-    Save the best model (policy network parameters) for a given traffic level.
-    The model is saved in MODEL_DIR with the traffic level in the filename.
-    """
-    model_path = os.path.join(MODEL_DIR, f"{traffic_level}_traffic_model.pth")
+# Function to save the best model (overwrite previous best)
+def save_best_model(agents, avg_reward):
+    model_path = os.path.join(MODEL_DIR, "best_model.npz")
     model_data = {tl: agent.policy_net.state_dict() for tl, agent in agents.items()}
-    torch.save(model_data, model_path)
-    print(f"💾 Best model updated for {traffic_level} traffic: {model_path} (Avg Reward: {avg_reward:.2f})")
+    # Save using NumPy's savez; you might also use torch.save for a PyTorch checkpoint.
+    np.savez(model_path, **model_data)
+    print(f"💾 Best model updated: {model_path} (Avg Reward: {avg_reward:.2f})")
 
-# -------------------------
-# Function: Train PPO Agents for a Given Traffic Level
-# -------------------------
-def train_agent_for_traffic_level(traffic_level):
-    """
-    Train PPO agents (one per traffic light) for the specified traffic level.
-    Generates routes, launches SUMO with those routes, runs the training loop,
-    saves the best model, and plots a training progress graph.
-    """
-    print(f"\n🚦 Starting training for {traffic_level} traffic...")
-    routes_file = generate_random_routes(traffic_level)
+# Initialize reward tracking for graphing
+episode_rewards = []
+best_avg_reward = float('-inf')
 
-    # Build SUMO command with the generated routes file
+# Training parameters
+NUM_EPISODES = 1000
+MAX_STEPS = 500
+
+# Main training loop
+for episode in range(NUM_EPISODES):
+    print(f"\n🚦 Starting Episode {episode + 1}/{NUM_EPISODES}")
+    generate_random_routes()  # Generate new traffic scenario
+    
+    # Launch SUMO with suppressed warnings/logs
     sumo_cmd = [
         SUMO_BINARY, "-c", SUMO_CONFIG, "--start",
-        "--route-files", routes_file,
         "--no-warnings", "--no-step-log", "--error-log", LOG_FILE
     ]
     traci.start(sumo_cmd)
-
-    # Retrieve all traffic light IDs from the simulation
+    
+    # Get traffic light IDs
     traffic_lights = traci.trafficlight.getIDList()
-
-    # Create PPO agents (one per intersection)
+    
+    # Create PPO agents for each traffic light.
+    # (Here we create a separate PPO agent per intersection.
+    # In practice, you might use weight sharing for scalability.)
     agents = {
         tl: TrafficLightPPOAgent(tl, len(traci.trafficlight.getAllProgramLogics(tl)[0].phases))
         for tl in traffic_lights
     }
-
-    # Training parameters
-    NUM_EPISODES = 10000  # Adjust as needed
-    MAX_STEPS = 500
-
-    episode_rewards = []
-    best_avg_reward = float('-inf')
-
-    # Main training loop
-    for episode in range(NUM_EPISODES):
-        print(f"\n[{traffic_level.upper()}] 🚦 Starting Episode {episode + 1}/{NUM_EPISODES}")
-        total_reward = 0
-
-        # Start a spinner for training progress
-        spinner = Halo(text=f"[{traffic_level.upper()}] Training Episode {episode + 1}/{NUM_EPISODES}", spinner="dots")
-        spinner.start()
-
-        for step in range(MAX_STEPS):
-            traci.simulationStep()
-            for tl, agent in agents.items():
-                state = agent.get_state(traci)
-                action, log_prob, value = agent.select_action(state)
-                # Apply the discrete action: set phase
-                traci.trafficlight.setPhase(tl, action[0])
-                # Apply the continuous action: adjust phase duration (base duration 30 seconds)
-                traci.trafficlight.setPhaseDuration(tl, max(5, action[1] + 30))
-                traci.simulationStep()  # Advance simulation to observe effect
-
-                # Compute reward:
-                # For state = [total_queue, avg_speed, emergency_flag]
-                # reward = 0.1 * avg_speed - total_queue - 5 * emergency_flag
-                reward = 0.1 * state[1] - state[0] - 5 * state[2]
-                total_reward += reward
-
-                # Store transition (done=0 until episode end)
-                agent.store_transition(state, action, log_prob, reward, value, done=0)
-
-        avg_reward = total_reward / MAX_STEPS
-        episode_rewards.append(avg_reward)
-
-        # Update each agent using the collected trajectory
+    
+    total_reward = 0
+    
+    # Start a spinner for training progress
+    spinner = Halo(text=f"Training Episode {episode + 1}/{NUM_EPISODES}", spinner="dots")
+    spinner.start()
+    
+    for step in range(MAX_STEPS):
+        traci.simulationStep()
+        
+        # For each traffic light, get state, select action, apply it, and store transition.
         for tl, agent in agents.items():
-            next_state = agent.get_state(traci)
-            agent.update(next_state, done=1)
-
-        spinner.succeed(f"[{traffic_level.upper()}] ✅ Episode {episode + 1} Complete - Avg Reward: {avg_reward:.2f}")
-
-        # Save best model if improved
-        if avg_reward > best_avg_reward:
-            best_avg_reward = avg_reward
-            save_best_model(agents, avg_reward, traffic_level)
-
+            state = agent.get_state(traci)
+            action, log_prob, value = agent.select_action(state)
+            # Apply the action:
+            # 1. Set the phase (discrete action)
+            traci.trafficlight.setPhase(tl, action[0])
+            # 2. Adjust the phase duration (continuous action)
+            #    (Assume you have a mechanism in your simulation to adjust duration, e.g.,
+            #     using traci.trafficlight.setPhaseDuration. Here we add the adjustment.)
+            traci.trafficlight.setPhaseDuration(tl, max(5, action[1] + 30))  # base duration 30 seconds, adjusted by action
+            
+            traci.simulationStep()  # Observe effect
+            
+            # Compute reward using enhanced function:
+            # reward = 0.1 * avg_speed - total_queue - 5*emergency_flag
+            s = state  # state is [total_queue, avg_speed, emergency_flag]
+            reward = 0.1 * s[1] - s[0] - 5 * s[2]
+            total_reward += reward
+            # Store transition (here, we assume 'done' is False for all steps until episode end)
+            agent.store_transition(state, action, log_prob, reward, value, done=0)
+    
+    avg_reward = total_reward / MAX_STEPS
+    episode_rewards.append(avg_reward)
+    
+    # For each agent, update using the collected trajectory.
+    for tl, agent in agents.items():
+        # Get next state (we use current state as the final state)
+        next_state = agent.get_state(traci)
+        agent.update(next_state, done=1)
+    
+    spinner.succeed(f"✅ Episode {episode + 1} Complete - Avg Reward: {avg_reward:.2f}")
+    
+    # Save best model if improved
+    if avg_reward > best_avg_reward:
+        best_avg_reward = avg_reward
+        save_best_model(agents, avg_reward)
+    
     traci.close()
-
-    # Plot and save training progress graph (overwrite previous file for this traffic level)
+    
+    # Plot and save training progress graph (overwrite previous file)
     plt.figure(figsize=(10, 5))
     plt.plot(range(1, len(episode_rewards) + 1), episode_rewards, marker="o", linestyle="-", color="b", label="Avg Reward")
     plt.xlabel("Episode")
     plt.ylabel("Average Reward")
-    plt.title(f"PPO Training Progress ({traffic_level.upper()} Traffic)")
+    plt.title("PPO Training Progress")
     plt.legend()
     plt.grid()
-    graph_path = os.path.join(OUTPUT_DIR, f"training_progress_{traffic_level}.png")
+    graph_path = os.path.join(OUTPUT_DIR, "training_progress.png")
     plt.savefig(graph_path)
     plt.close()
-    print(f"📊 Graph saved for {traffic_level} traffic: {graph_path} (Overwritten each run)")
+    print(f"📊 Graph saved: {graph_path} (Overwritten every episode)")
 
-    print(f"🏁 Training Complete for {traffic_level} traffic! Warnings & logs stored in {LOG_FILE}")
-
-# -------------------------
-# Main: Run Training in Parallel for Different Traffic Levels
-# -------------------------
-def main():
-    # Define traffic levels for which to train separate agents
-    traffic_levels = ["low", "medium", "rush"]
-
-    processes = []
-    for level in traffic_levels:
-        p = multiprocessing.Process(target=train_agent_for_traffic_level, args=(level,))
-        processes.append(p)
-        p.start()
-
-    # Wait for all processes to finish
-    for p in processes:
-        p.join()
-
-    print("🏁 All traffic level agents have been trained successfully!")
-
-if __name__ == "__main__":
-    main()
+print("🏁 Training Complete! Warnings & logs stored in", LOG_FILE)

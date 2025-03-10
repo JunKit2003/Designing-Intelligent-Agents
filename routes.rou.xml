@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-03-10 15:18:37 by Eclipse SUMO duarouter Version 1.22.0
+<!-- generated on 2025-03-10 15:18:35.344586 by randomTrips.py v1_22_0+0002-63e50f52594
+<configuration>
+    <net-file value="c:\Users\Jun Kit\Desktop\Designing-Intelligent-Agents\src\python\..\network\GeorgeTown.net.xml"/>
+    <output-trip-file value="c:\Users\Jun Kit\Desktop\Designing-Intelligent-Agents\src\python\..\routes\GeorgeTown.trips.xml"/>
+    <fringe-factor value="5"/>
+    <validate value="True"/>
+</configuration>
+-->
+
+<!-- generated on 2025-03-10 15:18:34 by Eclipse SUMO duarouter Version 1.22.0
 <duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
 
     <input>
@@ -9,8 +18,20 @@
     </input>
 
     <output>
-        <output-file value="c:\Users\Jun Kit\Desktop\Designing-Intelligent-Agents\src\python\..\routes\GeorgeTown.rou.xml"/>
+        <output-file value="routes.rou.xml"/>
+        <alternatives-output value="NUL"/>
     </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
 
 </duarouterConfiguration>
 -->
