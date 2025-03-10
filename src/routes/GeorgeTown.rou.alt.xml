@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-03-10 08:21:36 by Eclipse SUMO duarouter Version 1.22.0
+<!-- generated on 2025-03-10 08:31:31 by Eclipse SUMO duarouter Version 1.22.0
 <duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
 
     <input>
-        <net-file value="c:\Users\Jun Kit\Desktop\GeorgeTown-sumo\python\..\network\GeorgeTown.net.xml"/>
-        <route-files value="c:\Users\Jun Kit\Desktop\GeorgeTown-sumo\python\..\routes\GeorgeTown.trips.xml"/>
+        <net-file value="c:\Users\Jun Kit\Desktop\Designing-Intelligent-Agents\src\python\..\network\GeorgeTown.net.xml"/>
+        <route-files value="c:\Users\Jun Kit\Desktop\Designing-Intelligent-Agents\src\python\..\routes\GeorgeTown.trips.xml"/>
     </input>
 
     <output>
-        <output-file value="c:\Users\Jun Kit\Desktop\GeorgeTown-sumo\python\..\routes\GeorgeTown.rou.xml"/>
+        <output-file value="c:\Users\Jun Kit\Desktop\Designing-Intelligent-Agents\src\python\..\routes\GeorgeTown.rou.xml"/>
     </output>
 
 </duarouterConfiguration>
