@@ -1,0 +1,17 @@
+Loading net-file from 'C:\Users\tinaabishegan\Documents\DIA\Designing-Intelligent-Agents\sumo-scenarios-main\bologna\pasubio\pasubio_buslanes.net.xml' ... done (21ms).
+Loading additional-files from 'C:\Users\tinaabishegan\Documents\DIA\Designing-Intelligent-Agents\sumo-scenarios-main\bologna\pasubio\pasubio_vtypes.add.xml' ... done (5ms).
+Loading additional-files from 'C:\Users\tinaabishegan\Documents\DIA\Designing-Intelligent-Agents\sumo-scenarios-main\bologna\pasubio\pasubio_bus_stops.add.xml' ... done (4ms).
+Loading additional-files from 'C:\Users\tinaabishegan\Documents\DIA\Designing-Intelligent-Agents\sumo-scenarios-main\bologna\pasubio\pasubio_busses.rou.xml' ... done (10ms).
+Loading additional-files from 'C:\Users\tinaabishegan\Documents\DIA\Designing-Intelligent-Agents\sumo-scenarios-main\bologna\pasubio\pasubio_detectors.add.xml' ... done (5ms).
+Loading additional-files from 'C:\Users\tinaabishegan\Documents\DIA\Designing-Intelligent-Agents\sumo-scenarios-main\bologna\pasubio\pasubio_tls.add.xml' ... done (4ms).
+Loading route-files incrementally from 'C:\Users\tinaabishegan\Documents\DIA\Designing-Intelligent-Agents\sumo-scenarios-main\bologna\pasubio\pasubio.rou.xml'
+Loading done.
+Simulation ended at time: 0.00.
+Performance:
+ Duration: 5.52s
+ Real time factor: 0
+ UPS: 0.000000
+Vehicles:
+ Inserted: 0 (Loaded: 121)
+ Running: 0
+ Waiting: 0
