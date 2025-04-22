@@ -3,7 +3,7 @@
     <input>
         <net-file value="acosta_buslanes.net.xml" />
         <additional-files value="acosta_vtypes.add.xml,acosta_detectors.add.xml,acosta_bus_stops.add.xml,acosta_tls.add.xml" />
-    <route-files value="route_mixed_episode_376.rou.xml" /></input>
+    <route-files value="route_mixed_episode_1000.rou.xml" /></input>
 
     <output>
         <tripinfo-output value="tripinfos.xml" />

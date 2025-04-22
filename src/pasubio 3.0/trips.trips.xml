@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-04-16 01:29:59.446836 by randomTrips.py v1_22_0+0002-63e50f52594
+<!-- generated on 2025-04-18 13:46:25.945611 by randomTrips.py v1_22_0+0002-63e50f52594
 <configuration>
     <net-file value="pasubio_buslanes.net.xml"/>
     <route-file value="temp_route_heavy.rou.xml"/>
@@ -13,7 +13,7 @@
 </configuration>
 -->
 
-<!-- generated on 2025-04-16 01:29:59 by Eclipse SUMO duarouter Version 1.22.0
+<!-- generated on 2025-04-18 13:46:25 by Eclipse SUMO duarouter Version 1.22.0
 <duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
 
     <input>

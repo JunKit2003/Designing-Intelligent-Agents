@@ -530,7 +530,7 @@ if __name__ == "__main__":
     parser.add_argument("--gamma", type=float, default=0.99, help="Discount factor")
     parser.add_argument("--target_update", type=int, default=10, help="Steps between target net updates")
     parser.add_argument("--eval_interval", type=int, default=10, help="Episodes between evaluations")
-    parser.add_argument("--save_interval", type=int, default=50, help="Episodes between saves")
+    parser.add_argument("--save_interval", type=int, default=20, help="Episodes between saves")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
     parser.add_argument("--use_gui", action="store_true", help="Use SUMO GUI")
     parser.add_argument("--output_dir", type=str, default=os.path.join(os.path.dirname(__file__), "../output_mixed"), help="Directory to save models and results")
