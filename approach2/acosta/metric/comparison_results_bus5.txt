@@ -1,0 +1,12 @@
+Comparison: Fixed-Time vs. Trained Model
+=========================================
+
+Metric                  | Fixed-Time | Trained Model | Improvement
+------------------------|------------|--------------|------------
+Bus Waiting Time (s)     |     645.48 |       549.24 |      14.91%
+Other Waiting Time (s)   |     918.85 |       617.09 |      32.84%
+All Waiting Time (s)     |     908.42 |       613.91 |      32.42%
+Bus Speed (m/s)          |       0.74 |         1.02 |      38.07%
+Other Speed (m/s)        |       1.24 |         1.88 |      51.50%
+All Speed (m/s)          |       1.22 |         1.85 |      51.26%
+Avg Queue Length         |      10.30 |         8.53 |      17.23%
